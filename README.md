@@ -1,7 +1,4 @@
-# Webpack Frontend Starterkit
-
-A lightweight foundation for your next webpack based frontend project.
-
+# Generated with Webpack Frontend Starterkit
 
 ### Installation
 
