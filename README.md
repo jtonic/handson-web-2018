@@ -1,5 +1,12 @@
 # Generated with Webpack Frontend Starterkit
 
+
+EcmaScript 6
+----
+- array functions don't have their own this
+- bind function copy a function and pass to it a new this
+
+
 ### Installation
 
 ```

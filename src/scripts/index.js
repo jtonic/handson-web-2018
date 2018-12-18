@@ -1,7 +1,31 @@
+// ===============================================
+// default parameters
+// ===============================================
+console.log('============================');
+console.log('default parameter');
+console.log('============================');
 
+let trackingCar = function track(carId, city = 'Bucharest') {
+    console.log(`tracking ${carId} in ${city}`);
+};
+trackingCar(123);
+trackingCar(456, 'Galati');
 
 // ===============================================
-// this, call, apply
+// arrow function
+// ===============================================
+console.log('============================');
+console.log('arrow function');
+console.log('============================');
+
+let sum = (a, b) => a + b;
+console.log(`sum of 1 + 2 is ${sum(1, 2)}`);
+
+let print = _ => console.log(_);
+print('a');
+
+// ===============================================
+// this, call, apply, bind
 // ===============================================
 console.log('============================');
 console.log('this, call, apply');
@@ -19,10 +43,14 @@ let person = {
 };
 
 console.log(person.getAge('You are '));
-let jtonic = { age: 48 };
+let jtonic = {age: 48};
 console.log(person.getAge.apply(jtonic, ['You are also']));
 console.log(person.toString());
 console.log(person.toString.call(jtonic));
+
+let irina = {age: 29};
+let irinaAge = person.toString.bind(irina);
+console.log(irinaAge());
 
 // ===============================================
 // operators
@@ -49,16 +77,34 @@ console.log(`settings: ${defaultConf}`);
 console.log('============================');
 console.log('Falsy expressions');
 console.log('============================');
-if (!0) { console.log('0 is falsy'); }
-if (!false) { console.log('false is falsy'); }
-if (!'') { console.log('"" is falsy'); }
-if (!undefined) { console.log('undefined is falsy'); }
-if (!NaN) { console.log('NaN is falsy'); }
-if (!null) { console.log('null is falsy'); }
-if (!Infinity) { console.log('Infinity is falsy?'); }
-if (!{}) { console.log('{} is falsy?'); }
+if (!0) {
+    console.log('0 is falsy');
+}
+if (!false) {
+    console.log('false is falsy');
+}
+if (!'') {
+    console.log('"" is falsy');
+}
+if (!undefined) {
+    console.log('undefined is falsy');
+}
+if (!NaN) {
+    console.log('NaN is falsy');
+}
+if (!null) {
+    console.log('null is falsy');
+}
+if (!Infinity) {
+    console.log('Infinity is falsy?');
+}
+if (!{}) {
+    console.log('{} is falsy?');
+}
 let emptyArray = [];
-if (!emptyArray) { console.log('Empty array ([]) is falsy?'); }
+if (!emptyArray) {
+    console.log('Empty array ([]) is falsy?');
+}
 
 // ===============================================
 // deconstruction arrays
@@ -82,10 +128,10 @@ let car = {
     name: 'skoda'
 };
 
-let { id: carId, name: carName } = car;
+let {id: carId, name: carName} = car;
 // let carId, carName;
 // ({ id: carId,  name: carName } = car);
-console.log(carId,  carName);
+console.log(carId, carName);
 
 // ===============================================
 // spread operator
@@ -93,8 +139,9 @@ console.log(carId,  carName);
 console.log('============================');
 console.log('spread operator');
 console.log('============================');
+
 function startCars(car1, car2, ...theRest) {
-    console.log(car1,  car2,  theRest);
+    console.log(car1, car2, theRest);
 }
 
 let cars = [1, 2, 3, 4, 5, 6];
@@ -106,10 +153,12 @@ startCars(...cars);
 console.log('============================');
 console.log("rest parameters");
 console.log('============================');
+
 function startCarz(day, ...cars) {
     console.log(day);
     cars.forEach(id => console.log(`Start car ${id}`));
 }
+
 startCarz(1, 2, 3, 4, 5);
 
 // ===============================================
@@ -122,7 +171,8 @@ console.log(typeof (1));
 console.log(typeof ('a'));
 console.log(typeof (false));
 console.log(typeof ({}));
-console.log(typeof (function () {}));
+console.log(typeof (function () {
+}));
 console.log(typeof ([]));
 console.log(typeof (null));
 console.log(typeof (NaN));
@@ -141,7 +191,7 @@ let n2 = Number.parseInt('20ABC');
 let n3 = Number.parseInt('X20ABC');
 console.log(n1, n2, n3);
 console.log(typeof (n1));
-let s1 = (1/0).toString();
+let s1 = (1 / 0).toString();
 console.log(s1, typeof (s1));
 
 let s2 = n1.toString();
