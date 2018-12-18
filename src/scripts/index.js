@@ -1,3 +1,38 @@
+console.log('============================');
+console.log('JSON');
+console.log('============================');
+
+
+let str = `
+    [
+        { "carId": 1 },
+        { "carId": 2 },
+        { "carId": 3 }
+    ]
+`;
+let carz = JSON.parse(str);
+console.log(carz);
+
+console.log(JSON.stringify(carz));
+
+// ===============================================
+// constructor function, prototype
+// ===============================================
+console.log('============================');
+console.log('constructor function, prototype');
+console.log('============================');
+
+function Car(carId) {
+    this.carId = carId;
+}
+
+Car.prototype.start = function () {
+    console.log(`Starting car ${this.carId}`);
+};
+
+let audi = new Car(123);
+audi.start();
+
 // ===============================================
 // default parameters
 // ===============================================
