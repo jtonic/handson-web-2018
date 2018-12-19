@@ -13,6 +13,7 @@ import conv from "../../chapters/conversions";
 import lp from "../../chapters/loop";
 import bom from "../../chapters/bom";
 import dom from "../../chapters/dom";
+import tcf from "../../chapters/try_catch_finally";
 
 cars();
 
@@ -53,3 +54,5 @@ json();
 bom();
 
 dom();
+
+tcf();
