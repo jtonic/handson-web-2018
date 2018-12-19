@@ -5,7 +5,13 @@ EcmaScript 6
 ----
 - array functions don't have their own this
 - bind function copy a function and pass to it a new this
-
+- import a default exported module with alias
+```ecmascript 6
+// module.js
+export default exec;
+// client.js
+import {default as alias} from 'my-module';
+```
 
 ### Installation
 

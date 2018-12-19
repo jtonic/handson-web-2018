@@ -1,4 +1,4 @@
-import {Vehicle, Automobile} from "../../chapters/cars";
+import {Vehicle, Automobile, default as cars} from "../../chapters/cars";
 import json from "../../chapters/json";
 import cf from "../../chapters/constructor_function";
 import dp from "../../chapters/default_params";
@@ -11,6 +11,11 @@ import rp from "../../chapters/spred_rest";
 import to from "../../chapters/typeof";
 import conv from "../../chapters/conversions";
 import lp from "../../chapters/loop";
+import bom from "../../chapters/bom";
+
+bom();
+
+cars();
 
 let car2 = new Vehicle(123);
 car2.id = 456;

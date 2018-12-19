@@ -1,7 +1,3 @@
-console.log('============================');
-console.log('Classes');
-console.log('============================');
-
 class Vehicle {
 
     constructor(id, type = 'unknown') {
@@ -25,4 +21,11 @@ class Automobile extends Vehicle {
     }
 }
 
+function exec() {
+  console.log('============================');
+  console.log('Classes');
+  console.log('============================');
+}
+
+export default exec;
 export {Vehicle, Automobile};
