@@ -11,12 +11,14 @@ module.exports = {
     path: Path.join(__dirname, '../build'),
     filename: 'js/[carName].js'
   },
-  optimization: {
+  //this optimisation prevents chrome tab refresh on changed file save
+  //keep it commented out
+/* optimization: {
     splitChunks: {
       chunks: 'all',
       name: false
     }
-  },
+  },*/
   plugins: [
     new CleanWebpackPlugin(['build'], { root: Path.resolve(__dirname, '..') }),
     new CopyWebpackPlugin([
@@ -31,6 +33,7 @@ module.exports = {
       '~': Path.resolve(__dirname, '../src')
     }
   },
+  node: { fs: 'empty' },
   module: {
     rules: [
       {
