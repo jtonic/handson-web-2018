@@ -12,20 +12,19 @@ import to from "../../chapters/typeof";
 import conv from "../../chapters/conversions";
 import lp from "../../chapters/loop";
 import bom from "../../chapters/bom";
-
-bom();
+import dom from "../../chapters/dom";
 
 cars();
 
 let car2 = new Vehicle(123);
+
 car2.id = 456;
+
 car2.start();
 console.log(car2, car2.id);
 let auto1 = new Automobile(123, 'automobile');
 auto1.start();
 console.log(`automobile: ${auto1.id}`);
-
-json();
 
 cf();
 
@@ -48,3 +47,9 @@ to();
 conv();
 
 lp();
+
+json();
+
+bom();
+
+dom();
