@@ -17,7 +17,7 @@ function exec() {
 
   setTimeout(function () {
     clearInterval(interval);
-  }, 4500)
+  }, 3100)
 
   // alert("This is an alert message!!")
 }
