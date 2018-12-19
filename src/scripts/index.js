@@ -15,6 +15,7 @@ import bom from "../../chapters/bom";
 import dom from "../../chapters/dom";
 import tcf from "../../chapters/try_catch_finally";
 import pr from "../../chapters/promises";
+import xhr from "../../chapters/xhr";
 
 cars();
 
@@ -59,3 +60,5 @@ dom();
 tcf();
 
 pr();
+
+xhr();
