@@ -17,6 +17,7 @@ import tcf from "../../chapters/try_catch_finally";
 import pr from "../../chapters/promises";
 import xhr from "../../chapters/xhr";
 import jq from "../../chapters/jquery";
+import fm from '../../chapters/html_form';
 
 cars();
 
@@ -66,3 +67,4 @@ xhr();
 
 jq();
 
+fm();
