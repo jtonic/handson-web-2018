@@ -12,6 +12,17 @@ export default exec;
 // client.js
 import {default as alias} from 'my-module';
 ```
+- use let instead of var - var gets hoisted.
+- Security:
+  - Man in the middle attacks:
+    - HTTP header `Strict-Transport-Security`
+    - cookies attributes 
+      `Secure`, `HttpOnly`
+  - XSS (Cross Site Scripting) attacks:
+    - HTTP headers:
+      - CSP `Content-Security-Policy`,
+      - CORS - Cross Origin Resource Sharing`Access-Control-Allow-Origin` ()
+   
 
 ### Installation
 

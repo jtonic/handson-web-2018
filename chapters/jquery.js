@@ -22,7 +22,7 @@ function exec() {
       'http://5c1a57c81bf6300013c7df9b.mockapi.io/jtonic/api/v1/users');
   promise.then(
       (data) => {
-        console.log(data);
+        console.log(`jquery get: ${data}`);
       },
       (err) => console.log(err)
   );

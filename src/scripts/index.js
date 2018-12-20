@@ -18,6 +18,7 @@ import pr from "../../chapters/promises";
 import xhr from "../../chapters/xhr";
 import jq from "../../chapters/jquery";
 import fm from '../../chapters/html_form';
+import sec from '../../chapters/security';
 
 cars();
 
@@ -68,3 +69,5 @@ xhr();
 jq();
 
 fm();
+
+sec();
