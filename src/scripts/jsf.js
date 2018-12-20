@@ -20,7 +20,12 @@ import jq from "./js_fundamentals/jquery";
 import fm from './js_fundamentals/html_form';
 import sec from './js_fundamentals/security';
 
+console.log('============================');
+console.log('JavaScript fundamentals');
+console.log('============================');
+
 function exec() {
+
   cars();
 
   let car2 = new Vehicle(123);
