@@ -12,12 +12,12 @@ function exec() {
   console.log(`${location.href}, ${location.protocol}, ${location.port}, ${location.hostname}, ${location.pathname}, ${location.search}`);
 
   let interval = setInterval(function () {
-    console.log("1 sec passed!!!")
+    console.log("1 sec passed!!!");
   }, 1000);
 
   setTimeout(function () {
     clearInterval(interval);
-  }, 3100)
+  }, 3100);
 
   // alert("This is an alert message!!")
 }

@@ -17,7 +17,7 @@ class Automobile extends Vehicle {
 
     start() {
         super.start();
-        console.log("In automobile...")
+        console.log("In automobile...");
     }
 }
 

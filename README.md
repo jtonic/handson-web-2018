@@ -24,6 +24,23 @@ import {default as alias} from 'my-module';
       - CORS - Cross Origin Resource Sharing`Access-Control-Allow-Origin` ()
    
 
+
+### Common JS errors:
+- when a const is not initialized -> __SyntaxError__
+```ecmascript 6
+const MY_CONST;
+console.log(MY_CONST);
+// Uncaught SyntaxError: Missing initializer in const declaration
+```
+- const cannot be reassigned -> __TypeError__
+```ecmascript 6
+const MY_CONST = 100;
+MY_CONST = 200;
+console.log(MY_CONST);
+// Uncaught TypeError: Assignment to constant variable.
+
+```
+
 ### Installation
 
 ```
