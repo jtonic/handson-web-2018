@@ -22,8 +22,24 @@ import {default as alias} from 'my-module';
     - HTTP headers:
       - CSP `Content-Security-Policy`,
       - CORS - Cross Origin Resource Sharing`Access-Control-Allow-Origin` ()
-   
-
+- pay attention to __arrow functions__
+  - arrow function does not allow to change __this__ using __bind, call or apply__ methods,
+  - __this__ in arrow functions does refer to running context (window) not to the context of the arrow. By comparison the normal function refers the context it is in. __SO, 
+ 
+    ___WHENEVER YOU SEE A STRANGE VALUE OF THIS THINK ABOUT CHANGING IT WITH A NORMAL FUNCTION___ 
+  - fat arrow functions don't have prototype.
+- default parameters:
+  - a default parameter can use the other parameters value
+  - a default parameter can use an outside function
+  - arguments - ignore the default parameters
+  ```ecmascript 6
+  function income2(amount = 1000, taxes = amount * (1 - 0.12)) {
+      console.log('income2 fun arguments length', arguments.length); // 1
+      console.log(`amount ${amount}, taxes ${taxes}`);
+    }
+    income2(3000);
+  ```
+  - works even with dynamic function (new Function(params, body))
 
 ### Common JS errors:
 - when a const is not initialized -> __SyntaxError__
