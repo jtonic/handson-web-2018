@@ -1,3 +1,5 @@
+'use strict';
+
 console.log('============================');
 console.log('rest/spread');
 console.log('============================');

@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 console.log('============================');
 console.log('[ES6] Arrow functions');

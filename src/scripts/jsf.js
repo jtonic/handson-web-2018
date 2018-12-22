@@ -1,3 +1,5 @@
+"use strict";
+
 import {Vehicle, Automobile, default as cars} from "./js_fundamentals/cars";
 import json from "./js_fundamentals/json";
 import cf from "./js_fundamentals/constructor_function";

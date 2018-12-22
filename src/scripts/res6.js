@@ -1,3 +1,5 @@
+"use strict";
+
 import af from './rapid_es6/arrow_function';
 import dp from './rapid_es6/default_params';
 import df from './rapid_es6/dynamic_function';
