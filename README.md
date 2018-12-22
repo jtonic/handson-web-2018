@@ -40,6 +40,15 @@ import {default as alias} from 'my-module';
     income2(3000);
   ```
   - works even with dynamic function (new Function(params, body))
+  
+- String template (string interpolation)
+  - an interpolated string can be passed to a function using the infix notation
+  ```ecmascript 6
+  function greeting(msg) {
+    console.log(typeof msg, msg, msg[0]);
+  }
+  greeting `antonel`;
+  ```
 
 ### Common JS errors:
 - when a const is not initialized -> __SyntaxError__
