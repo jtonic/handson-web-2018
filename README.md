@@ -74,7 +74,15 @@ import {default as alias} from 'my-module';
   import * as person from './module2';
   console.log(person, person.firstName, person.lastName, person.age);
   ```
+  - imported variables from a module are read-only. They are not imported as variable
+  ```ecmascript 6
+  // in module1.js
+  export let projectName = 'handson-web-2018';
   
+  // in modules.js
+  import {projectName} from './module1';
+  projectName = 'newProject';
+  ```
   
   
   
