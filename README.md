@@ -58,6 +58,27 @@ import {default as alias} from 'my-module';
     console.log(a4);
   // Uncaught TypeError: undefined is not iterable
   ```
+  
+- modules
+  - import statements get hoisted
+  - imports all exports from a module
+  ```ecmascript 6
+  // in module2.js
+  let firstName = 'Antonel-Ernest';
+  let lastName = 'Pazargic';
+  let age = 48;
+  
+  export {firstName, lastName, age};  
+
+  //in modules.js
+  import * as person from './module2';
+  console.log(person, person.firstName, person.lastName, person.age);
+  ```
+  
+  
+  
+  
+
 
 ### Common JS errors:
 - when a const is not initialized -> __SyntaxError__

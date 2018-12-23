@@ -9,6 +9,7 @@ import fol from './rapid_es6/for_of_loop';
 import st from './rapid_es6/string_template';
 import dea from './rapid_es6/destructuring_arrays';
 import deo from './rapid_es6/destructuring_objects';
+import mds from './rapid_es6/modules';
 
 console.log('============================');
 console.log('Rapid ECMAScript 6');
@@ -24,6 +25,7 @@ function exec() {
   st();
   dea();
   deo();
+  mds();
 }
 
 export default exec;
