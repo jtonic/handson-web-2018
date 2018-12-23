@@ -3,6 +3,8 @@
 
 EcmaScript 6
 ----
+- let, const are block scoping variable, constant unlike var which is not (and is hoisted)
+
 - array functions don't have their own this
 - bind function copy a function and pass to it a new this
 - import a default exported module with alias
@@ -49,6 +51,13 @@ import {default as alias} from 'my-module';
   }
   greeting `antonel`;
   ```
+- destructuring
+  - requires iterator
+  ```ecmascript 6
+    let [a4] = undefined; // null is not iterable as well
+    console.log(a4);
+  // Uncaught TypeError: undefined is not iterable
+  ```
 
 ### Common JS errors:
 - when a const is not initialized -> __SyntaxError__
@@ -63,8 +72,10 @@ const MY_CONST = 100;
 MY_CONST = 200;
 console.log(MY_CONST);
 // Uncaught TypeError: Assignment to constant variable.
-
 ```
+
+### Still unclear (requires more effort to master)
+- __this__ in fat arrow function 
 
 ### Installation
 
