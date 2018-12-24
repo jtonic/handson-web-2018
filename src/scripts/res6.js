@@ -10,6 +10,8 @@ import st from './rapid_es6/string_template';
 import dea from './rapid_es6/destructuring_arrays';
 import deo from './rapid_es6/destructuring_objects';
 import mds from './rapid_es6/modules';
+import cls from './rapid_es6/classes';
+import cls2 from './rapid_es6/classes2';
 
 console.log('============================');
 console.log('Rapid ECMAScript 6');
@@ -26,6 +28,8 @@ function exec() {
   dea();
   deo();
   mds();
+  cls();
+  cls2();
 }
 
 export default exec;

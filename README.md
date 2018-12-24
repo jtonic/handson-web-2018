@@ -84,9 +84,35 @@ import {default as alias} from 'my-module';
   projectName = 'newProject';
   ```
   
-  
-  
-
+- classes 
+    - classes are not hoisted;
+    ```ecmascript 6
+    // Uncaught ReferenceError: Income is not defined
+    let income1 = new Income();
+    
+    class Income { /*...*/ }
+    ```
+    - class definition can be assigned to a variable;
+    ```ecmascript 6
+    let newTask = class Task { };
+    new newTask();
+    ```  
+   
+    - we cannot call `call` on a class instance
+    ```ecmascript 6
+    class Income {}
+    let obj1 = {};
+    // Class constructor Income cannot be invoked without 'new'
+    Income.call(obj1);
+    ```
+    - class creation does not pollute the global window namespace
+    
+    - a static field (static let a = 1;) cannot be declared in the class. 
+    Declare it as usual with 
+    ```ecmascript 6
+      class Project { }
+      Project.description = 'project description';
+    ```
 
 ### Common JS errors:
 - when a const is not initialized -> __SyntaxError__
