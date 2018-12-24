@@ -15,12 +15,13 @@ import cls2 from './rapid_es6/classes2';
 import sym from './rapid_es6/symbol';
 import sym2 from './rapid_es6/symbol2';
 import oe2 from './rapid_es6/object_extensions2';
+import se from './rapid_es6/string_extensions';
 
-console.log('============================');
-console.log('Rapid ECMAScript 6');
-console.log('============================');
+export default function () {
+  console.log('============================');
+  console.log('Rapid ECMAScript 6');
+  console.log('============================');
 
-function exec() {
   af();
   dp();
   df();
@@ -36,6 +37,5 @@ function exec() {
   sym();
   sym2();
   oe2();
-}
-
-export default exec;
+  se();
+};
