@@ -12,6 +12,8 @@ import deo from './rapid_es6/destructuring_objects';
 import mds from './rapid_es6/modules';
 import cls from './rapid_es6/classes';
 import cls2 from './rapid_es6/classes2';
+import sym from './rapid_es6/symbol';
+import sym2 from './rapid_es6/symbol2';
 
 console.log('============================');
 console.log('Rapid ECMAScript 6');
@@ -30,6 +32,8 @@ function exec() {
   mds();
   cls();
   cls2();
+  sym();
+  sym2();
 }
 
 export default exec;

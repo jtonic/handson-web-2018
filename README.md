@@ -113,6 +113,12 @@ import {default as alias} from 'my-module';
       class Project { }
       Project.description = 'project description';
     ```
+    
+    - symbols
+        - well-known ones:
+            - toStringTag
+            - toPrimitive
+            - isConcatSpreadable
 
 ### Common JS errors:
 - when a const is not initialized -> __SyntaxError__
