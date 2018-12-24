@@ -14,6 +14,7 @@ import cls from './rapid_es6/classes';
 import cls2 from './rapid_es6/classes2';
 import sym from './rapid_es6/symbol';
 import sym2 from './rapid_es6/symbol2';
+import oe2 from './rapid_es6/object_extensions2';
 
 console.log('============================');
 console.log('Rapid ECMAScript 6');
@@ -34,6 +35,7 @@ function exec() {
   cls2();
   sym();
   sym2();
+  oe2();
 }
 
 export default exec;

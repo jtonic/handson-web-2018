@@ -3,6 +3,11 @@
 
 EcmaScript 6
 ----
+- NaN is not equal with anything, even with itself
+    ```ecmascript 6
+    console.log(NaN === NaN); // return false
+    console.log(Object.is(NaN, NaN)) //return true
+    ```
 - let, const are block scoping variable, constant unlike var which is not (and is hoisted)
 
 - array functions don't have their own this
@@ -119,6 +124,11 @@ import {default as alias} from 'my-module';
             - toStringTag
             - toPrimitive
             - isConcatSpreadable
+            
+    - Object extensions
+        - `Object.assign` is not looking at prototype chain at all
+        - Use Object.is instead of ===
+        
 
 ### Common JS errors:
 - when a const is not initialized -> __SyntaxError__

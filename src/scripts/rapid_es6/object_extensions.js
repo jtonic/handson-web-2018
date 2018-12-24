@@ -1,10 +1,10 @@
 'use strict';
 
-console.log('============================');
-console.log('object extensions');
-console.log('============================');
-
 function exec() {
+
+  console.log('============================');
+  console.log('object extensions');
+  console.log('============================');
 
   let fName = 'Antonel-Ernest';
   let lName = 'Pazargic';
