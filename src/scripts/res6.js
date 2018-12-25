@@ -17,6 +17,7 @@ import sym2 from './rapid_es6/symbol2';
 import oe2 from './rapid_es6/object_extensions2';
 import se from './rapid_es6/string_extensions';
 import ne from './rapid_es6/number_extensions';
+import re from './rapid_es6/regex_extensions';
 
 export default function () {
   console.log('============================');
@@ -40,4 +41,5 @@ export default function () {
   oe2();
   se();
   ne();
+  re();
 };
