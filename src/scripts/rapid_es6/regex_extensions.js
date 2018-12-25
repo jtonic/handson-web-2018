@@ -23,5 +23,4 @@ export default function () {
   pattern5.lastIndex = 3;
   console.log(pattern5.test('800900'));
   console.log(pattern5.flags);
-
 }
