@@ -119,15 +119,25 @@ import {default as alias} from 'my-module';
       Project.description = 'project description';
     ```
     
-    - symbols
-        - well-known ones:
-            - toStringTag
-            - toPrimitive
-            - isConcatSpreadable
+- symbols
+    - well-known ones:
+        - toStringTag
+        - toPrimitive
+        - isConcatSpreadable
             
-    - Object extensions
-        - `Object.assign` is not looking at prototype chain at all
-        - Use Object.is instead of ===
+- Object extensions
+    - `Object.assign` is not looking at prototype chain at all
+    - Use Object.is instead of ===
+        
+- Number extensions:
+    - use the following extensions of Number:
+        - parseInt, parseFloat
+        - isNaN,
+        - isFinite,
+        - isInteger
+        - isSafeInteger
+
+- 
         
 
 ### Common JS errors:

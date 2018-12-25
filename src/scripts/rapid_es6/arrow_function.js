@@ -1,10 +1,11 @@
 "use strict";
 
-console.log('============================');
-console.log('[ES6] Arrow functions');
-console.log('============================');
-
 function exec() {
+
+  console.log('============================');
+  console.log('[ES6] Arrow functions');
+  console.log('============================');
+
   let person1 = {
     name: 'jtonic',
     walk: function () {
