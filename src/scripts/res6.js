@@ -19,6 +19,7 @@ import se from './rapid_es6/string_extensions';
 import ne from './rapid_es6/number_extensions';
 import re from './rapid_es6/regex_extensions';
 import fe from './rapid_es6/function_extensions';
+import it from './rapid_es6/iterators';
 
 export default function () {
   console.log('============================');
@@ -44,4 +45,5 @@ export default function () {
   ne();
   re();
   fe();
+  it();
 };
