@@ -20,8 +20,10 @@ import ne from './rapid_es6/number_extensions';
 import re from './rapid_es6/regex_extensions';
 import fe from './rapid_es6/function_extensions';
 import it from './rapid_es6/iterators';
+import ge from './rapid_es6/generators';
 
 export default function () {
+
   console.log('============================');
   console.log('Rapid ECMAScript 6');
   console.log('============================');
@@ -46,4 +48,5 @@ export default function () {
   re();
   fe();
   it();
+  ge();
 };

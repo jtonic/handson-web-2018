@@ -1,13 +1,11 @@
 "use strict";
 
-console.log('============================');
-console.log('array destruction');
-console.log('============================');
+export default function () {
 
-function exec() {
+    console.log('============================');
+    console.log('array destruction');
+    console.log('============================');
 
-  let fn = new Function('amount = 1000', "console.log('dynamic function', amount);");
-  fn();
+    let fn = new Function('amount = 1000', "console.log('dynamic function', amount);");
+    fn();
 }
-
-export default exec;

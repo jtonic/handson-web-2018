@@ -1,10 +1,10 @@
 'use strict';
 
-console.log('============================');
-console.log('[ES6] Destructuring objects');
-console.log('============================');
+export default function() {
 
-function exec() {
+  console.log('============================');
+  console.log('[ES6] Destructuring objects');
+  console.log('============================');
 
   let person = {
     firstName: 'Antonel-Ernest',
@@ -28,5 +28,3 @@ function exec() {
   ({ net,  gross } = income);
   console.log(net, gross);
 }
-
-export default exec;

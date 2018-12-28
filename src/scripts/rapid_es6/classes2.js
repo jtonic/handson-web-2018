@@ -1,10 +1,10 @@
 'use strict';
 
-console.log('============================');
-console.log('[ES6] Classes2');
-console.log('============================');
-
 export default function () {
+
+    console.log('============================');
+    console.log('[ES6] Classes2');
+    console.log('============================');
 
     class Project {
         constructor() {

@@ -1,6 +1,6 @@
 "use strict";
 
-function exec() {
+export default function () {
 
   console.log('============================');
   console.log('[ES6] Arrow functions');
@@ -38,6 +38,4 @@ function exec() {
   };
   let nfHasOwnPrototype = fn2.hasOwnProperty('prototype');
   console.log(`Normal function has onw prototype ${nfHasOwnPrototype}`);
-}
-
-export default exec;
+};

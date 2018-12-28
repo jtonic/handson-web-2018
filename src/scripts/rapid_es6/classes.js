@@ -1,10 +1,11 @@
 'use strict';
 
-console.log('============================');
-console.log('[ES6] Classes');
-console.log('============================');
-
 export default function () {
+
+    console.log('============================');
+    console.log('[ES6] Classes');
+    console.log('============================');
+
     class Income {
 
         constructor() {

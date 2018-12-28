@@ -1,10 +1,10 @@
 'use strict';
 
-console.log('============================');
-console.log('[ES6] String template');
-console.log('============================');
-
 function exec() {
+
+  console.log('============================');
+  console.log('[ES6] String template');
+  console.log('============================');
 
   let name = 'Antonel';
   let age = 48;

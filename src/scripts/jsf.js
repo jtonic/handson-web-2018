@@ -22,11 +22,11 @@ import jq from "./js_fundamentals/jquery";
 import fm from './js_fundamentals/html_form';
 import sec from './js_fundamentals/security';
 
-console.log('============================');
-console.log('JavaScript fundamentals');
-console.log('============================');
+export default function() {
 
-function exec() {
+  console.log('============================');
+  console.log('JavaScript fundamentals');
+  console.log('============================');
 
   cars();
 
@@ -80,5 +80,3 @@ function exec() {
 
   sec();
 }
-
-export default exec;

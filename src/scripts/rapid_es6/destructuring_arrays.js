@@ -1,10 +1,10 @@
 'use strict';
 
-console.log('============================');
-console.log('[ES6] Destructuring arrays');
-console.log('============================');
+export default function() {
 
-function exec() {
+  console.log('============================');
+  console.log('[ES6] Destructuring arrays');
+  console.log('============================');
 
   let arr1 = [1, 2, 3];
   let [a, , , d = 4] = arr1;
@@ -31,5 +31,3 @@ function exec() {
     console.log(e.name, e.message);
   }
 }
-
-export default exec;

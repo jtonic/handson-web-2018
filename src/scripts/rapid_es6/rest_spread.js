@@ -1,10 +1,10 @@
 'use strict';
 
-console.log('============================');
-console.log('rest/spread');
-console.log('============================');
+export default function() {
 
-function exec() {
+  console.log('============================');
+  console.log('rest/spread');
+  console.log('============================');
 
   function income(amount, ...taxes) {
     console.log(taxes instanceof Array);
@@ -27,5 +27,3 @@ function exec() {
   let arr5 = ['a',...'bcd', 'e'];
   console.log(arr5);
 }
-
-export default exec;
