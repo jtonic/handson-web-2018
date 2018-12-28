@@ -21,6 +21,7 @@ import re from './rapid_es6/regex_extensions';
 import fe from './rapid_es6/function_extensions';
 import it from './rapid_es6/iterators';
 import ge from './rapid_es6/generators';
+import pr from './rapid_es6/promises';
 
 export default function () {
 
@@ -49,4 +50,5 @@ export default function () {
   fe();
   it();
   ge();
+  pr();
 };
