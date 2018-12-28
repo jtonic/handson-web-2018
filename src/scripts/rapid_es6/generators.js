@@ -49,4 +49,40 @@ export default function () {
 
     let iter2 = generator2();
     console.log(iter2.next().value, iter2.next().value, iter2.next().value);
+
+    console.log('generator with return');
+    console.log('---------------------');
+    function* generator3() {
+        yield 9000;
+        yield 9001;
+        yield 9002;
+    }
+    let iter3 = generator3();
+    console.log(iter3.next());
+    console.log(iter3.return(-1));
+    console.log(iter3.next());
+
+    console.log('generator with throw - caught exception in generator itself');
+    console.log('--------------------');
+    function* generator4() {
+        try {
+            yield 9000;
+            yield 9001;
+            yield 9002;
+        } catch (e) {
+            yield -1;
+        }
+    }
+
+    let iter5 = generator4();
+    console.log(iter5.next());
+    console.log(iter5.throw(new Error('Error thrown by the generator client')));
+    console.log(iter5.next());
+
+    console.log('generator with throw - uncaught error');
+    console.log('--------------------');
+    let iter4 = generator3();
+    console.log(iter4.next());
+    console.log(iter4.throw(new Error('Error thrown from the generator client')));
+    console.log(iter4.next());
 };
