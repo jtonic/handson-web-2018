@@ -83,6 +83,7 @@ export default function () {
     console.log('--------------------');
     let iter4 = generator3();
     console.log(iter4.next());
-    console.log(iter4.throw(new Error('Error thrown from the generator client')));
+    // uncomment the following and the generator will throw an exception and the whole scripts executions after this won't be executed.
+    // console.log(iter4.throw(new Error('Error thrown from the generator client')));
     console.log(iter4.next());
 };

@@ -21,7 +21,6 @@ export default function () {
         return p;
     }
 
-/*
     let p1 = async(true);
     p1.then(value => console.log(`success ${value}`),
         reason => console.log(`error: ${reason}`)
@@ -44,7 +43,6 @@ export default function () {
         value => console.log(`p3 p4 combined is OK. ${value}`),
         reason => console.log(`p3 p4 combined is not OK. ${reason}`)
     );
-*/
 
     console.log('promises race');
     console.log('-----------------------------');
