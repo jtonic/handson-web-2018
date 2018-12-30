@@ -3,7 +3,7 @@
 export default function () {
 
     console.log('============================');
-    console.log('[ES6] Map / WeekMap');
+    console.log('[ES6] Map / WeakMap');
     console.log('============================');
 
     let countries = new Map();

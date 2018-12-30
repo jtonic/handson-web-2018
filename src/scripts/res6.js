@@ -24,6 +24,7 @@ import ge from './rapid_es6/generators';
 import pr from './rapid_es6/promises';
 import ae from './rapid_es6/array_extensions';
 import ma from './rapid_es6/map_weakmap';
+import sew from './rapid_es6/set_weakset';
 
 export default function () {
 
@@ -55,4 +56,5 @@ export default function () {
   pr();
   ae();
   ma();
+  sew();
 };
