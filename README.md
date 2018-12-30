@@ -139,7 +139,19 @@ import {default as alias} from 'my-module';
 
 -  Array extensions
     - use `Array.of(...T)` instead of `Array(...T)` because `Array(100).length == 100` not 1
-        
+    
+- Map
+    - transform a map into an array:
+    ```ecmascript 6
+    let keysArr = [...map.keys()];
+    let valuesArr = [...map.values()];
+    let entriesArr = [...map.entries()];
+    ```
+    - transform an array of array into a map
+    ```ecmascript 6
+    let arr = [[{capital: 'Bucharest'}, 100], [{capital: 'Sophia'}, 200]];
+    let map = new Map(arr);
+    ```
 
 ### Common JS errors:
 - when a const is not initialized -> __SyntaxError__
@@ -158,29 +170,4 @@ console.log(MY_CONST);
 
 ### Still unclear (requires more effort to master)
 - __this__ in fat arrow function 
-
-### Installation
-
-```
-npm install
-```
-
-### Start Dev Server
-
-```
-npm start
-```
-
-### Build Prod Version
-
-```
-npm run build
-```
-
-### Features:
-
-* ES6 Support via [babel](https://babeljs.io/) (v7)
-* SASS Support via [sass-loader](https://github.com/jtangelder/sass-loader)
-* Linting via [eslint-loader](https://github.com/MoOx/eslint-loader)
-
-When you run `npm run build` we use the [mini-css-extract-plugin](https://github.com/webpack-contrib/mini-css-extract-plugin) to move the css to a separate file. The css file gets included in the head of the `index.html`.
+- __ByteArray, little/big endian__

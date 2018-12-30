@@ -23,6 +23,7 @@ import it from './rapid_es6/iterators';
 import ge from './rapid_es6/generators';
 import pr from './rapid_es6/promises';
 import ae from './rapid_es6/array_extensions';
+import ma from './rapid_es6/map_weakmap';
 
 export default function () {
 
@@ -53,4 +54,5 @@ export default function () {
   ge();
   pr();
   ae();
+  ma();
 };
