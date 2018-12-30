@@ -22,6 +22,7 @@ import fe from './rapid_es6/function_extensions';
 import it from './rapid_es6/iterators';
 import ge from './rapid_es6/generators';
 import pr from './rapid_es6/promises';
+import ae from './rapid_es6/array_extensions';
 
 export default function () {
 
@@ -51,4 +52,5 @@ export default function () {
   it();
   ge();
   pr();
+  ae();
 };

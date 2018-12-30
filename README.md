@@ -137,7 +137,8 @@ import {default as alias} from 'my-module';
         - isInteger
         - isSafeInteger
 
-- 
+-  Array extensions
+    - use `Array.of(...T)` instead of `Array(...T)` because `Array(100).length == 100` not 1
         
 
 ### Common JS errors:
