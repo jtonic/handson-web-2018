@@ -25,6 +25,7 @@ import pr from './rapid_es6/promises';
 import ae from './rapid_es6/array_extensions';
 import ma from './rapid_es6/map_weakmap';
 import sew from './rapid_es6/set_weakset';
+import ref from './rapid_es6/reflect_api';
 
 export default function () {
 
@@ -57,4 +58,5 @@ export default function () {
   ae();
   ma();
   sew();
+  ref();
 };

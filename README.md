@@ -119,6 +119,8 @@ import {default as alias} from 'my-module';
       Project.description = 'project description';
     ```
     
+    - class constructor is in fact the prototype of the class 
+    
 - symbols
     - well-known ones:
         - toStringTag
@@ -152,6 +154,27 @@ import {default as alias} from 'my-module';
     let arr = [[{capital: 'Bucharest'}, 100], [{capital: 'Sophia'}, 200]];
     let map = new Map(arr);
     ```
+    
+- Reflect API
+    - prevent extensions:
+    ```ecmascript 6
+      Reflect.preventExtensions(cr2);
+      cr2.galaxy = 'Milky Way'; // Uncaught TypeError: Cannot add property galaxy, object is not extensible
+    ```
+    - check if an object is extensible:
+    ```ecmascript 6
+      Reflect.isExtensible(cr2);
+    ```
+    - API: 
+        - create a class instance
+        `Reflect.construct`, 
+        - working with properties:
+        `Reflect.has`, `Reflect.get`, `Reflect.set`, `Reflect.defineProperty`, `Reflect.deleteProperty`
+        - call a function:
+        `Reflect.apply`,
+        - work with prototype:
+        `Reflect.setPrototypeOf()`, `Reflect.getPrototypeOf()`
+        
 
 ### Common JS errors:
 - when a const is not initialized -> __SyntaxError__
@@ -171,3 +194,4 @@ console.log(MY_CONST);
 ### Still unclear (requires more effort to master)
 - __this__ in fat arrow function 
 - __ByteArray, little/big endian__
+- `Reflect#getOwnPropertyDescriptor`
