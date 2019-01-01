@@ -175,6 +175,35 @@ import {default as alias} from 'my-module';
         - work with prototype:
         `Reflect.setPrototypeOf()`, `Reflect.getPrototypeOf()`
         
+- Proxy 
+    - it is very useful for prototyping:
+    ```ecmascript 6
+        let t = {
+          tableId: 87
+        };
+        
+        let p = new Proxy({}, {
+          get(target, p, receiver) {
+              return `Property "${p}" does not exist.`;
+          }
+        });
+        Reflect.setPrototypeOf(t, p);
+    ```
+    - proxy can be revocable. A revocable proxy can be constructed with `Proxy.revocable`
+    ```ecmascript 6
+        let t2 = {
+              tableId: 87
+          };
+        let {proxy, revoke} = Proxy.revocable(t2, {
+                get(target, p, receiver) {
+                    console.log(`get property ${p} on ${target}`);
+                    return Reflect.get(target, p, receiver) + 100;
+                }
+            });
+        console.log(proxy.tableId);
+        revoke();
+        console.log(proxy.tableId); // BOOM!!!! Uncaught TypeError: Cannot perform 'get' on a proxy that has been revoked
+    ```
 
 ### Common JS errors:
 - when a const is not initialized -> __SyntaxError__

@@ -26,6 +26,7 @@ import ae from './rapid_es6/array_extensions';
 import ma from './rapid_es6/map_weakmap';
 import sew from './rapid_es6/set_weakset';
 import ref from './rapid_es6/reflect_api';
+import pro from './rapid_es6/proxy';
 
 export default function () {
 
@@ -59,4 +60,5 @@ export default function () {
   ma();
   sew();
   ref();
+  pro();
 };
