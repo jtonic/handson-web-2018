@@ -1,0 +1,28 @@
+div {
+    color: blue;
+}
+.italic {
+    font-style: italic;
+}
+p {
+    background-color: gray;
+
+}
+.specific {
+    background-color: lightskyblue;
+}
+#more-specific {
+    background-color: lightgreen;
+}
+
+@media screen and (min-width: 480px) {
+    body {
+        background: linear-gradient(red, yellow);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        background-color: lightgoldenrodyellow;
+    }
+}
