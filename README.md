@@ -224,3 +224,7 @@ console.log(MY_CONST);
 - __this__ in fat arrow function 
 - __ByteArray, little/big endian__
 - `Reflect#getOwnPropertyDescriptor`
+
+### What to add to the project:
+- Bootstrap
+
