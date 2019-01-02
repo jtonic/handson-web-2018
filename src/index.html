@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Learning web technologies</title>
   <link rel="stylesheet" type="text/css" href="/public/main.css">
+  <script>
+    function showDate() {
+      document.getElementById('demo').innerText = Date();
+    }
+  </script>
 </head>
 <body>
   <h1>ECMAScript 6+</h1>
@@ -13,8 +18,8 @@
   <p class="specific">Paragraph 2</p>
   <p class="specific" id="more-specific">Paragraph 3</p>
 
-  <p id="date-div"></p>
-  <button onclick="document.getElementById('date-div').innerText=Date()">See date</button>
+  <p id="demo"></p>
+  <button onclick="showDate();">See date</button>
 
   <div>
     <ul>
