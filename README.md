@@ -93,6 +93,25 @@ import {default as alias} from 'my-module';
 
     let doggy2 = new Dog('Doggy2', 'brown');
     ```
+
+- object properties
+    - setter/getter for an object property
+    ```ecmascript 6
+    Reflect.defineProperty(cat1, 'fullName', {
+            get() {
+                return `${this.name.fName} ${this.name.lName}`;
+            },
+            set(value) {
+                let names = value.split(' ');
+                this.name.fName = names[0];
+                this.name.lName = names[1];
+            }
+        });
+    ```
+    - freezing an object property
+    ```ecmascript 6
+      Object.freeze(cat1.name);
+    ```
     
 - String template (string interpolation)
   - an interpolated string can be passed to a function using the infix notation
