@@ -48,6 +48,52 @@ import {default as alias} from 'my-module';
   ```
   - works even with dynamic function (new Function(params, body))
   
+- Object creation
+    - object literal
+    ```ecmascript 6
+    let fluffy = {name: 'Fluffy', color: 'Brown'};  
+    ```
+    - constructor function
+    ```ecmascript 6
+    function Cat(name, color) {
+      this.name = name;
+      this.color = color;
+    }
+    let fluffy = new Cat('Fluffy', 'Brown');
+    ```
+    - Object.create (this happens under the hood with all other ways of object creation)
+    ```ecmascript 6
+    let doggy = Object.create(Object.prototype, {
+        name: {
+            value: 'Doggy',
+            enumerable: true,
+            configurable: true,
+            writable: true,
+        },
+        color: {
+            value: 'dark gray',
+            enumerable: true,
+            writable: true,
+            configurable: true
+        }
+    });
+    ```
+    - using classes
+    ```ecmascript 6
+    class Dog {
+        constructor(name, color) {
+            this.name = name;
+            this.color = color;
+        }
+
+        display() {
+            console.log(`${this.name} ${this.color}`);
+        }
+    }
+
+    let doggy2 = new Dog('Doggy2', 'brown');
+    ```
+    
 - String template (string interpolation)
   - an interpolated string can be passed to a function using the infix notation
   ```ecmascript 6
