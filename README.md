@@ -270,6 +270,20 @@ import {default as alias} from 'my-module';
         console.log(proxy.tableId); // BOOM!!!! Uncaught TypeError: Cannot perform 'get' on a proxy that has been revoked
     ```
 
+### Best practices:
+
+- DON'T USE `==`. Use `===` instead. 
+```ecmascript 6
+    console.log(0 == false);
+    console.log(0 === false);
+```
+- check the variable existence this way
+```ecmascript 6
+    if (typeof x !== "undefined") {
+        return 'x exists';
+    }
+```
+
 ### Common JS errors:
 - when a const is not initialized -> __SyntaxError__
 ```ecmascript 6
