@@ -13,12 +13,23 @@ export default function () {
     console.log(0 === false);
 
     function exists(x) {
-        if (typeof x !== "undefined") {
+        if (x !== undefined) {
             return 'x exists';
         } else { // <- fix this eslint warn - no-else-return rule
             return 'x does not exists';
         }
     }
 
-    console.log(exists());
+    function hiddenPassedArgs() {
+        console.log(arguments);
+        console.log(arguments.length);
+        if (arguments.length >= 1) {
+            return `the argument passed is ${arguments[0]}`;
+        }
+        return "No passed arguments";
+    }
+
+    console.log(exists(), exists(0), exists(false), exists(NaN));
+
+    console.log(hiddenPassedArgs(), hiddenPassedArgs(1));
 };

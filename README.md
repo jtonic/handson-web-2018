@@ -282,6 +282,16 @@ import {default as alias} from 'my-module';
     if (typeof x !== "undefined") {
         return 'x exists';
     }
+    // this is also good
+    if (x !== undefined) { }
+```
+-- pass arguments to function instead of getting them from arguments iterator. DONT'T USE THIS:
+```ecmascript 6
+    function foo() {
+        if (arguments.length > 1)   {
+            console.log(`do smth with ${arguments[0]}`);
+        }
+    }
 ```
 
 ### Common JS errors:
