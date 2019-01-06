@@ -16,7 +16,7 @@ export default function () {
     var myVar = 10;
 
     myFunc(20);
-    expression(); // boom!!! This is because of var hoisting
+    // expression(); // boom!!! This is because of var hoisting
     function myFunc() {console.log('From my function');}
 
     let expression = function (){
