@@ -285,7 +285,7 @@ import {default as alias} from 'my-module';
     // this is also good
     if (x !== undefined) { }
 ```
--- pass arguments to function instead of getting them from arguments iterator. DONT'T USE THIS:
+- pass arguments to function instead of getting them from arguments iterator. DONT'T USE THIS:
 ```ecmascript 6
     function foo() {
         if (arguments.length > 1)   {
@@ -293,6 +293,42 @@ import {default as alias} from 'my-module';
         }
     }
 ```
+- Strive to create variable using the const or let or var (in this specific order)
+- Var and function declaration at the top of the scope
+- for function expression assign the anonymous function to let or const, NOT var
+```ecmascript 6
+    sum(1, 1)
+    let sum = function (a, b) { return a + b; };
+```
+
+### Useful eslint rules for clean code (best practices)
+in .eslintrc file
+```json
+    {
+      "rules": { // https://eslint.org/docs/rules/
+        "semi": ["error", "always"],
+        "brace-style": [2, "1tbs", { "allowSingleLine": true }],
+        "indent": ["error", 4], // 4 is the default, just to have it here
+        "eqeqeq": "warn",
+        "no-else-return": "warn",
+        "no-const-assign": "error",
+        "no-var": "warn",
+        "prefer-const": "warn",
+        "block-scoped-var": "error",
+        "vars-on-top": "error"
+      }
+    }
+```
+- Configuration of eslint in IntelliJ Idea
+    - Enable ESLint
+        - Go to Preferences | Languages & Frameworks | JavaScript | Code Quality Tools | ESLint
+        - Check enable (the defaults are fine)
+     
+    - Run eslint inspection
+        - press `cmd shift a`
+        - type `Run inspection by Name` (cmd alt shift i)
+        - type `eslint`
+        - check uncommitted files | All (or select the change list which are going to be solely committed)
 
 ### Common JS errors:
 - when a const is not initialized -> __SyntaxError__

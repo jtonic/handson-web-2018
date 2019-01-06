@@ -1,7 +1,8 @@
 {
   "env": {
     "browser": true,
-    "node": true
+    "node": true,
+    "es6": true
   },
   "parserOptions": {
     "ecmaVersion": 6,
@@ -9,9 +10,18 @@
   },
   "rules": { // https://eslint.org/docs/rules/
     "semi": ["error", "always"],
+    "vars-on-top": "error",
     "brace-style": [2, "1tbs", { "allowSingleLine": true }],
     "indent": ["error", 4], // 4 is the default, just to have it here
     "eqeqeq": "warn",
-    "no-else-return": "warn"
+    "no-else-return": "warn",
+    "no-const-assign": "error",
+    "no-var": "error",
+    "prefer-const": "warn",
+    "block-scoped-var": "error",
+    "no-shadow": "error",
+    "space-before-function-paren": ["warn", {"anonymous": "always", "named": "never", "asyncArrow": "always"}],
+    "block-spacing": ["warn", "always"],
+    "space-in-parens": ["error", "never"]
   }
 }
