@@ -329,6 +329,7 @@ in .eslintrc file
         - type `Run inspection by Name` (cmd alt shift i)
         - type `eslint`
         - check uncommitted files | All (or select the change list which are going to be solely committed)
+    - Make sure you have Perform code analysis checked in commit dialog. This will perform the eslint checks on the modified/new files.
         
 - DON'T USE GLOBAL VARIABLES. Use strict mode ('use strict') to prevent global variables. __In ECMAScript modules, which always have strict mode semantics, the directives are unnecessary.__
 
@@ -352,6 +353,8 @@ console.log(MY_CONST);
 - __ByteArray, little/big endian__
 - `Reflect#getOwnPropertyDescriptor`
 
-### What to add to the project:
+### What to add to the project (TODOs):
 - Bootstrap
+- create an npm script to run the eslint
+
 
