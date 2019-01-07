@@ -1,5 +1,3 @@
-"use strict";
-
 import {Vehicle, Automobile, default as cars} from "./js_fundamentals/cars";
 import json from "./js_fundamentals/json";
 import cf from "./js_fundamentals/constructor_function";
@@ -22,61 +20,61 @@ import jq from "./js_fundamentals/jquery";
 import fm from './js_fundamentals/html_form';
 import sec from './js_fundamentals/security';
 
-export default function() {
+export default function () {
 
-  console.log('============================');
-  console.log('JavaScript fundamentals');
-  console.log('============================');
+    console.log('============================');
+    console.log('JavaScript fundamentals');
+    console.log('============================');
 
-  cars();
+    cars();
 
-  let car2 = new Vehicle(123);
+    const car2 = new Vehicle(123);
 
-  car2.id = 456;
+    car2.id = 456;
 
-  car2.start();
-  console.log(car2, car2.id);
-  let auto1 = new Automobile(123, 'automobile');
-  auto1.start();
-  console.log(`automobile: ${auto1.id}`);
+    car2.start();
+    console.log(car2, car2.id);
+    const auto1 = new Automobile(123, 'automobile');
+    auto1.start();
+    console.log(`automobile: ${auto1.id}`);
 
-  cf();
+    cf();
 
-  dp();
+    dp();
 
-  af();
+    af();
 
-  tcab();
+    tcab();
 
-  op();
+    op();
 
-  fls();
+    fls();
 
-  dest();
+    dest();
 
-  rp();
+    rp();
 
-  to();
+    to();
 
-  conv();
+    conv();
 
-  lp();
+    lp();
 
-  json();
+    json();
 
-  bom();
+    bom();
 
-  dom();
+    dom();
 
-  tcf();
+    tcf();
 
-  pr();
+    pr();
 
-  xhr();
+    xhr();
 
-  jq();
+    jq();
 
-  fm();
+    fm();
 
-  sec();
+    sec();
 }

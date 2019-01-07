@@ -8,16 +8,16 @@ function exec() {
         console.log(car1, car2, theRest);
     }
 
-    let cars = [1, 2, 3, 4, 5, 6];
+    const cars = [1, 2, 3, 4, 5, 6];
     startCars(...cars);
 
     console.log('============================');
     console.log("rest parameters");
     console.log('============================');
 
-    function startCarz(day, ...cars) {
+    function startCarz(day, ...carz) {
         console.log(day);
-        cars.forEach(id => console.log(`Start car ${id}`));
+        carz.forEach(id => console.log(`Start car ${id}`));
     }
 
     startCarz(1, 2, 3, 4, 5);

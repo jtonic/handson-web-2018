@@ -4,52 +4,52 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: {
-    app: Path.resolve(__dirname, '../src/scripts/index.js')
-  },
-  output: {
-    path: Path.join(__dirname, '../build'),
-    filename: 'js/[carName].js'
-  },
-  //this optimisation prevents chrome tab refresh on changed file save
-  //keep it commented out
-/* optimization: {
+    entry: {
+        app: Path.resolve(__dirname, '../src/scripts/index.js')
+    },
+    output: {
+        path: Path.join(__dirname, '../build'),
+        filename: 'js/[carName].js'
+    },
+    //this optimisation prevents chrome tab refresh on changed file save
+    //keep it commented out
+    /* optimization: {
     splitChunks: {
       chunks: 'all',
       name: false
     }
   },*/
-  plugins: [
-    new CleanWebpackPlugin(['build'], { root: Path.resolve(__dirname, '..') }),
-    new CopyWebpackPlugin([
-      { from: Path.resolve(__dirname, '../public'), to: 'public' }
-    ]),
-    new HtmlWebpackPlugin({
-      template: Path.resolve(__dirname, '../src/index.html')
-    })
-  ],
-  resolve: {
-    alias: {
-      '~': Path.resolve(__dirname, '../src')
-    }
-  },
-  node: { fs: 'empty' },
-  module: {
-    rules: [
-      {
-        test: /\.mjs$/,
-        include: /node_modules/,
-        type: 'javascript/auto'
-      },
-      {
-        test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
-        use: {
-          loader: 'file-loader',
-          options: {
-            name: '[path][carName].[ext]'
-          }
+    plugins: [
+        new CleanWebpackPlugin(['build'], { root: Path.resolve(__dirname, '..') }),
+        new CopyWebpackPlugin([
+            { from: Path.resolve(__dirname, '../public'), to: 'public' }
+        ]),
+        new HtmlWebpackPlugin({
+            template: Path.resolve(__dirname, '../src/index.html')
+        })
+    ],
+    resolve: {
+        alias: {
+            '~': Path.resolve(__dirname, '../src')
         }
-      },
-    ]
-  }
+    },
+    node: { fs: 'empty' },
+    module: {
+        rules: [
+            {
+                test: /\.mjs$/,
+                include: /node_modules/,
+                type: 'javascript/auto'
+            },
+            {
+                test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        name: '[path][carName].[ext]'
+                    }
+                }
+            },
+        ]
+    }
 };

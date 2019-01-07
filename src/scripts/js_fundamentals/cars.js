@@ -22,9 +22,9 @@ class Automobile extends Vehicle {
 }
 
 function exec() {
-  console.log('============================');
-  console.log('Classes');
-  console.log('============================');
+    console.log('============================');
+    console.log('Classes');
+    console.log('============================');
 }
 
 export default exec;

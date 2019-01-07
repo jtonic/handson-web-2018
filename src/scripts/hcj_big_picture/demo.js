@@ -1,5 +1,3 @@
-"use strict";
-
 export default function () {
     const demoPar = document.getElementById('demo');
     const showDateBtn = document.getElementById('show-date');

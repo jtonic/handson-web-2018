@@ -329,6 +329,8 @@ in .eslintrc file
         - type `Run inspection by Name` (cmd alt shift i)
         - type `eslint`
         - check uncommitted files | All (or select the change list which are going to be solely committed)
+        
+- DON'T USE GLOBAL VARIABLES. Use strict mode ('use strict') to prevent global variables. __In ECMAScript modules, which always have strict mode semantics, the directives are unnecessary.__
 
 ### Common JS errors:
 - when a const is not initialized -> __SyntaxError__

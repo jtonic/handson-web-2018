@@ -1,5 +1,3 @@
-"use strict";
-
 console.log('before imports in modules.js');
 
 import type, {projectId as id, projectName, projectVersion, income, showIncome} from './module1';
